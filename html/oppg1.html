@@ -17,6 +17,10 @@
 
             function leggTil(){
 
+                document.getElementById("dag").style.borderColor="initial";
+                document.getElementById("maned").style.borderColor="initial";
+                document.getElementById("ar").style.borderColor="initial";
+
                 var a = document.getElementById("dag");
                 var dag = a.options[a.selectedIndex].value;
 
@@ -30,11 +34,65 @@
                 console.log(maned);
                 console.log(ar);
 
-                if(dag === 0){
-                    document.getElementById("dag").style.backgroundColor="red";
-                    document.getElementById("warning").innerHTML = "Velg en dag";
+                check(dag, maned, ar);
+
+                if(check(dag, maned, ar) === false){
+
+                }
+                else{
+                    add(dag, maned, ar);
                 }
 
+            }
+
+            function check(dag, maned, ar){
+
+                if(dag === "0" && maned === "0" && ar === "!"){
+                    document.getElementById("dag").style.borderColor="red";
+                    document.getElementById("maned").style.borderColor="red";
+                    document.getElementById("ar").style.borderColor="red";
+                    document.getElementById("warning").innerHTML = "Velg en dag, en måned og et år";
+                    return false;
+                }
+                else if(dag === "0" && maned === "0"){
+                    document.getElementById("dag").style.borderColor="red";
+                    document.getElementById("maned").style.borderColor="red";
+                    document.getElementById("warning").innerHTML = "Velg en dag og en måned";
+                    return false;
+                }
+                else if(maned === "0" && ar === "!"){
+                    document.getElementById("maned").style.borderColor="red";
+                    document.getElementById("ar").style.borderColor="red";
+                    document.getElementById("warning").innerHTML = "Velg en måned og et år";
+                    return false;
+                }
+                else if(dag === "0" && ar === "!"){
+                    document.getElementById("dag").style.borderColor="red";
+                    document.getElementById("ar").style.borderColor="red";
+                    document.getElementById("warning").innerHTML = "Velg en dag og et år";
+                    return false;
+                }
+                else if(dag === "0"){
+                    document.getElementById("dag").style.borderColor="red";
+                    document.getElementById("warning").innerHTML = "Velg en dag";
+                }
+                else if(maned === "0"){
+                    document.getElementById("maned").style.borderColor="red";
+                    document.getElementById("warning").innerHTML = "Velg en måned";
+                    return false;
+                }
+                else if(ar === "!"){
+                    document.getElementById("ar").style.borderColor="red";
+                    document.getElementById("warning").innerHTML = "Velg et år";
+                    return false;
+                }
+
+                return true;
+
+            }
+
+            function add(dag, maned, ar){
+                
             }
 		
 		</script>
