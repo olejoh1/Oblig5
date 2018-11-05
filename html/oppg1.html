@@ -9,6 +9,10 @@
 		
 			window.onload = oppstart;
 
+            var data = [];
+            var date = [];
+            var time = [];
+
 			function oppstart(){
 
                 document.getElementById("btnLeggtil").onclick = leggTil;
@@ -17,7 +21,13 @@
 
             function leggTil(){
 
-                
+                var a = document.getElementById("dataInn").value;
+                data = a.split("¤");
+                console.log(data);
+
+                document.getElementById("headLine").innerHTML = data[0] + "-" + data[1];
+                document.getElementById("utskrift").innerHTML = data[2];
+                document.getElementById("plasser").innerHTML = "Antall plasser: " + data[3];
 
             }
 
@@ -90,7 +100,10 @@
                     <button id="btnLeggtil" type="button">Legg til</button>
 
                     <p id="warning"></p>
+
+                    <h4 id="headLine"></h4>
                     <p id="utskrift"></p>
+                    <p id="plasser"></p>
                 </article>
 			</section>
 		</main>
