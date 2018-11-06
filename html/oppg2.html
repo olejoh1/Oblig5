@@ -111,9 +111,13 @@
 			</ul>
 		</nav>
 		<main id="row">
-			<section class="column_nr_1">
+			<section>
                 <h2>Presentasjoner</h2>
-                <article>
+                <article class="column nr_2">
+                    <p>Velg kurs</p>
+                    <select>
+                        <option value="!" hidden>Kurs</option>
+                    </select>
                     <p>Skriv inn navn:</p>
                     <input type="text" id="navnInn" placeholder="Skriv inn navn">
                     <br />
@@ -123,7 +127,7 @@
                     <br />
                     <button type="button" id="btnRegistrer">Registrer</button>
                 </article>
-				<article>
+				<article class="column nr_2">
 
                     <p id="utskrift"></p>
 
