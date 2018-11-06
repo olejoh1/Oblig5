@@ -9,25 +9,43 @@
 		
 			window.onload = oppstart;
 
-            var data = [];
-            var date = [];
-            var time = [];
+            var dataleser;
 
 			function oppstart(){
 
-                document.getElementById("btnLeggtil").onclick = leggTil;
+                dataleser = new XMLHttpRequest();
+
+                var filnavn = "presentasjoner.dat?tullball=" + Math.random();
+
+                dataleser.open("GET",filnavn,true);
+
+                dataleser.onreadystatechange = visHendelser;
+
+                dataleser.send();
 				
 			}
 
-            function leggTil(){
+            function visHendelser(){
 
-                var a = document.getElementById("dataInn").value;
-                data = a.split("¤");
+                if(dataleser.readyState === 4 && dataleser.readyState === 200){
 
-                document.getElementById("headLine").innerHTML = data[0] + "-" + data[1];
-                document.getElementById("utskrift").innerHTML = data[2];
-                document.getElementById("plasser").innerHTML = "Antall plasser: " + data[3];
+                    var linjer = dataleser.responseTEXT.split("\n");
 
+                    for(var i = 0; i < linjer.length; i++){
+
+                        var deler = linjer[i].split(";");
+
+                        console.log(deler);
+
+                    }
+
+                }
+                else if(dataleser.readyState === 4 && dataleser.readyState === 404) {
+
+                    document.getElementById("utskrift").innerHTML = "Shit...";
+
+                }
+                
             }
 
             
@@ -92,17 +110,10 @@
 			<section id="column_nr_1">
                 <h2>Presentasjoner</h2>
 				<article>
-                    <h3>Legg til hendelse</h3>
+                    <h3>Kommende hendelse</h3>
 
-                    <input id="dataInn" type="text" placeholder="Skriv inn data">
-
-                    <button id="btnLeggtil" type="button">Legg til</button>
-
-                    <p id="warning"></p>
-
-                    <h4 id="headLine"></h4>
                     <p id="utskrift"></p>
-                    <p id="plasser"></p>
+
                 </article>
 			</section>
 		</main>
