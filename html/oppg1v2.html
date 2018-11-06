@@ -9,44 +9,44 @@
 		
 			window.onload = oppstart;
 
-            var dataleser;
+            var datalaster;
 
-			function oppstart(){
-
-                dataleser = new XMLHttpRequest();
-
-                var filnavn = "presentasjoner.dat?tullball=" + Math.random();
-
-                dataleser.open("GET",filnavn,true);
-
-                dataleser.onreadystatechange = visHendelser;
-
-                dataleser.send();
-				
+			function oppstart() {
+					
+					datalaster = new XMLHttpRequest();
+					
+					var filnavn = "resultater.dat?tullball="+Math.random();
+					
+					datalaster.open("GET",filnavn,true);
+					
+					datalaster.onreadystatechange = visHendelser;
+					
+					datalaster.send();
+	  	
+			
+		
+		
 			}
 
             function visHendelser(){
 
-                if(dataleser.readyState === 4 && dataleser.readyState === 200){
-
-                    var linjer = dataleser.responseTEXT.split("\n");
-
-                    for(var i = 0; i < linjer.length; i++){
-
-                        var deler = linjer[i].split(";");
-
-                        console.log(deler);
-
-                    }
-
-                }
-                else if(dataleser.readyState === 4 && dataleser.readyState === 404) {
-
-                    document.getElementById("utskrift").innerHTML = "Shit...";
-
-                }
-                
-            }
+                if( datalaster.readyState === 4 && datalaster.status === 200) {
+			
+					var linjer = datalaster.responseText.split("\n");
+			
+					for(var i=0;i<linjer.length;i++) {
+						var deler = linjer[i].split(";");					
+						
+						document.getElementById("utskrift").innerHTML += deler[i] + "<br />";
+						
+					}
+					
+				} 
+				else if (datalaster.readyState === 4 && datalaster.status === 404) {
+					
+					dosument.getElementById("utskrift").innerHTML = "Shit....";
+				}
+			}
 
             
 		
