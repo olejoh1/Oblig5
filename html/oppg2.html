@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Oblig5</title>
+		<link rel="stylesheet" type="text/css" href="../sheet/sheet.css">
+		
+		<script>
+		
+			window.onload = oppstart;
+
+            var datalaster;
+
+			function oppstart() {
+					
+					datalaster = new XMLHttpRequest();
+					
+					var filnavn = "presentasjoner.dat?tullball="+Math.random();
+					
+					datalaster.open("GET",filnavn,true);
+					
+					datalaster.onreadystatechange = visHendelser;
+					
+					datalaster.send();
+	  	
+			
+		
+		
+			}
+
+            function visHendelser(){
+
+                if( datalaster.readyState === 4 && datalaster.status === 200) {
+			
+					var linjer = datalaster.responseText.split("\n");
+			
+					for(var i=0;i<linjer.length;i++) {
+						var deler = linjer[i].split(";");					
+						
+						document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + deler[0] + "-" + deler[1] + "</b>" + "</i>" + "<br />" + 
+						deler[2] + "<br />" +
+						"Antall ledie plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
+						
+						console.log(deler);
+
+					}
+					
+				} 
+				else if (datalaster.readyState === 4 && datalaster.status === 404) {
+					
+					dosument.getElementById("utskrift").innerHTML = "Shit....";
+				}
+			}
+
+            
+		
+		</script>
+	</head>
+	<body>
+		<header>
+			<img id="banner" alt="Header" src="../bilder/banner.jpg" />
+		</header>
+					  
+		<nav>
+			<ul id="nav">
+				<li><a href="../home/home.html">Home</a></li>
+				<li class="dropdown">
+					<a class="dropbtn">Oblig1</a>
+					<div class="dropdown-content">
+						<a href="../Oblig1/oppg1.html">Oppg.1</a>
+						<a href="../Oblig1/oppg2.html">Oppg.2</a>
+						<a href="../Oblig1/oppg3.html">Oppg.3</a>
+						<a href="../Oblig1/oppg4.html">Oppg.4</a>
+						<a href="../Oblig1/oppg5.html">Oppg.5</a>
+						<a href="../Oblig1/oppg6.html">Oppg.6</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<a  class="dropbtn">Oblig2</a>
+					<div class="dropdown-content">
+						<a href="../Oblig2/oppg1_3.html">Oppg.1-3</a>
+						<a href="../Oblig2/oppg4.html">Oppg.4</a>
+                        <a href="../Oblig2/oppg5.html">Oppg.5</a>
+                        <a href="../Oblig2/oppg6.html">Oppg.6</a>
+                        <a href="../Oblig2/oppg7.html">Oppg.7</a>
+					</div>
+                </li>
+                <li class="dropdown">
+					<a  class="dropbtn">Oblig3</a>
+					<div class="dropdown-content">
+						<a href="../Oblig3/oppg1.html">Oppg.1</a>
+                        <a href="../Oblig3/oppg2.html">Oppg.2</a>
+                        <a href="../Oblig3/oppg3.html">Oppg.3</a>
+                        <a href="../Oblig3/oppg4.html">Oppg.4</a>
+                        <a href="../Oblig3/oppg5.html">Oppg.5</a>
+                        <a href="../Oblig3/oppg6.html">Oppg.6</a>
+                        <a href="../Oblig3/oppg7.html">Oppg.7</a>
+                        <a href="../Oblig3/oppg8.html">Oppg.8</a>
+					</div>
+                </li>
+				<li><a href="oblig_4.html">Oblig4</a></li>
+				<li class="dropdown">
+					<a  class="dropbtn">Oblig5</a>
+					<div class="dropdown-content">
+						<a href="oppg1.html">Oppg.1</a>
+                        <a href="oppg2.html">Oppg.2</a>
+                        <a href="oppg3.html">Oppg.3</a>
+                        <a href="oppg4.html">Oppg.4</a>
+					</div>
+                </li>
+			</ul>
+		</nav>
+		<main id="row">
+			<section class="column_nr_1">
+                <h2>Presentasjoner</h2>
+                <article>
+                    <p>Skriv inn navn:</p>
+                    <input type="text" id="navnInn" placeholder="Skriv inn navn">
+                    <br />
+                    <p>Skriv inn epost:</p>
+                    <input type="text" id="epostInn" placeholder="Skriv inn epost">
+                    <br />
+                    <br />
+                    <button type="button" id="btnRegistrer">Registrer</button>
+                </article>
+				<article>
+
+                    <p id="utskrift"></p>
+
+                </article>
+			</section>
+		</main>
+		<footer>
+				<p>Posted by: &copy; Ole Henrik Johansen</p>
+				<p>Contact informasjon: <a href="olehj@hiof.no">olehj@hoif.no</a></p>
+		</footer>
+	</body>
+
+
+</html>
