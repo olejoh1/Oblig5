@@ -15,7 +15,7 @@
 					
 					datalaster = new XMLHttpRequest();
 					
-					var filnavn = "resultater.dat?tullball="+Math.random();
+					var filnavn = "presentasjoner.dat?tullball="+Math.random();
 					
 					datalaster.open("GET",filnavn,true);
 					
@@ -37,8 +37,12 @@
 					for(var i=0;i<linjer.length;i++) {
 						var deler = linjer[i].split(";");					
 						
-						document.getElementById("utskrift").innerHTML += deler[i] + "<br />";
+						document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + deler[0] + "-" + deler[1] + "</b>" + "</i>" + "<br />" + 
+						deler[2] + "<br />" +
+						"Antall ledie plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
 						
+						console.log(deler);
+
 					}
 					
 				} 
