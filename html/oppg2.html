@@ -67,6 +67,10 @@
 
             function registrer(){
 
+                document.getElementById("kurs").style = "initial";
+                document.getElementById("navnInn").style = "initial";
+                document.getElementById("epostInn").style = "initial";
+
                 var e = document.getElementById("kurs");
                 var kurs = e.options[e.selectedIndex].value;
                 var navn = document.getElementById("navnInn").value;
@@ -78,15 +82,78 @@
 
             function registrert(kurs,navn,ePost){
 
-                registrering = new XMLHttpRequest();
+                var hendelse1 = (kurs === "!");
+                var hendelse2 = (navn === "");
+                var hendelse3 = (ePost === "");
 
-				var filnavn = "lagre.php?kurs="   + kurs +   "&navn=" + navn + "&epost=" + ePost
-				
-				alert(filnavn);
-				
-				registrering.open("GET",filnavn,true);
+                if(hendelse1 === true && hendelse2 === true && hendelse3 === true){
 
-				registrering.send();
+                    document.getElementById("kurs").style.border = "2px solid red";
+                    document.getElementById("navnInn").style.border = "2px solid red";
+                    document.getElementById("epostInn").style.border = "2px solid red";
+                    document.getElementById("warning").innerHTML = "Velg kurs og skriv inn navn og epost";
+
+                }
+
+                else if(hendelse1 === true && hendelse2 === true){
+
+                    document.getElementById("kurs").style.border = "2px solid red";
+                    document.getElementById("navnInn").style.border = "2px solid red";
+                    document.getElementById("warning").innerHTML = "Velg kurs og skriv inn navn";  
+
+                }
+
+                else if(hendelse1 === true && hendelse3 === true){
+
+                    document.getElementById("kurs").style.border = "2px solid red";
+                    document.getElementById("epostInn").style.border = "2px solid red";
+                    document.getElementById("warning").innerHTML = "Velg kurs og skriv inn epost";
+
+                }
+
+                else if(hendelse2 === true && hendelse3 === true){
+                    
+                    document.getElementById("navnInn").style.border = "2px solid red";
+                    document.getElementById("epostInn").style.border = "2px solid red";
+                    document.getElementById("warning").innerHTML = "Skriv inn navn og epost";
+
+                }
+
+                else if(hendelse1 === true){
+
+                    document.getElementById("kurs").style.border = "2px solid red";
+                    document.getElementById("warning").innerHTML = "Velg kurs";
+
+                }
+
+                else if(hendelse2 === true){
+
+                    document.getElementById("navnInn").style.border = "2px solid red";
+                    document.getElementById("warning").innerHTML = "Skriv inn navn";
+                    
+                }
+
+                else if(hendelse3 === true){
+
+                    document.getElementById("epostInn").style.border = "2px solid red";
+                    document.getElementById("warning").innerHTML = "Skriv inn epost";
+
+                }
+
+                else{
+                    registrering = new XMLHttpRequest();
+
+                    var filnavn = "lagre.php?kurs="   + kurs +   "&navn=" + navn + "&epost=" + ePost
+                    
+                    alert(filnavn);
+                    
+                    registrering.open("GET",filnavn,true);
+
+                    registrering.send();
+
+                    document.getElementById("warning").innerHTML = "Du er nå registrert";
+
+                }
             }
 
             
@@ -163,6 +230,8 @@
                     <br />
                     <br />
                     <button type="button" id="btnRegistrer">Registrer</button>
+                    <br />
+                    <p id="warning"></p>
                 </article>
 				<article class="column nr_2">
 
