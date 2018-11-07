@@ -10,6 +10,7 @@
 			window.onload = oppstart;
 
             var datalaster;
+            var registrering;
 
 			function oppstart() {
 					
@@ -23,7 +24,7 @@
 					
 					datalaster.send();
 	  	
-			
+                    document.getElementById("btnRegistrer").onclick = registrer;
 		
 		
 			}
@@ -34,7 +35,7 @@
 			
 					var linjer = datalaster.responseText.split("\n");
 			
-					for(var i=0;i<linjer.length;i++) {
+					for(var i = 0; i < linjer.length; i++) {
 						var deler = linjer[i].split(";");					
 						
 						document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + deler[0] + "-" + deler[1] + "</b>" + "</i>" + "<br />" + 
@@ -44,6 +45,18 @@
 						console.log(deler);
 
 					}
+
+                    for(var i = 0; i < linjer.length; i++){
+
+                        var del = linjer[i].split(";");
+
+                        var listePunkt = document.createElement("option");
+                        listePunkt.value = del[0];
+                        var tekst = document.createTextNode(del[1]);
+                        listePunkt.appendChild(tekst);
+                        document.getElementById("kurs").appendChild(listePunkt);
+
+                    }
 					
 				} 
 				else if (datalaster.readyState === 4 && datalaster.status === 404) {
@@ -51,6 +64,30 @@
 					dosument.getElementById("utskrift").innerHTML = "Shit....";
 				}
 			}
+
+            function registrer(){
+
+                var e = document.getElementById("kurs");
+                var kurs = e.options[e.selectedIndex].value;
+                var navn = document.getElementById("navnInn").value;
+                var ePost = document.getElementById("epostInn").value;
+
+                registrert(kurs,navn,ePost);
+                
+            }
+
+            function registrert(){
+
+                registrering = new XMLHttpRequest();
+
+				var filnavn = "lagre.php?kurs="   + kurs +   "&navn=" + navn + "&epost=" + ePost
+				
+				alert(filnavn);
+				
+				registrering.open("GET",filnavn,true);
+
+				registrering.send();
+            }
 
             
 		
@@ -115,7 +152,7 @@
                 <h2>Presentasjoner</h2>
                 <article class="column nr_2">
                     <p>Velg kurs</p>
-                    <select>
+                    <select id="kurs">
                         <option value="!" hidden>Kurs</option>
                     </select>
                     <p>Skriv inn navn:</p>
