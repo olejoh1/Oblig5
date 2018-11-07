@@ -11,6 +11,7 @@
 
             var datalaster;
             var registrering;
+            var paamelte;
 
 			function oppstart() {
 					
@@ -24,8 +25,7 @@
 					
 					datalaster.send();
 	  	
-                    document.getElementById("btnRegistrer").onclick = registrer;
-		
+                    document.getElementById("btnRegistrer").onclick = registrer;		
 		
 			}
 
@@ -36,11 +36,17 @@
 					var linjer = datalaster.responseText.split("\n");
 			
 					for(var i = 0; i < linjer.length; i++) {
-						var deler = linjer[i].split(";");					
+						var deler = linjer[i].split(";");
+
+                        var number = parseInt(tell(deler[0]));
+
+                        var plass = parseInt(deler[3]);
+
+                        var ledi = (plass - number);
 						
 						document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + deler[0] + "-" + deler[1] + "</b>" + "</i>" + "<br />" + 
 						deler[2] + "<br />" +
-						"Antall ledie plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
+						"Antall ledie plasser: " + ledi + " av " + deler[3] + "<br />"  + "<br />"  + "<br />";
 						
 						console.log(deler);
 
@@ -154,6 +160,39 @@
                     document.getElementById("warning").innerHTML = "Du er nå registrert";
 
                 }
+
+                visHendelser();
+
+            }
+
+            function tell(src){
+
+                var teller = 0;
+
+                paamelte = new XMLHttpRequest();
+
+                var filnavn = "paamelding.dat?tullball=" + Math.random();
+
+                paamelte.open("GET",filnavn,true);
+
+                paamelte.send();
+
+                var linjer = paamelte.responseText.split("\n");
+
+                for(var i = 0; i < linjer.length; i++){
+                    var deler = linjer[i].split(";");
+
+                    if(src === deler[0]){
+
+                        teller++;
+
+                    }
+
+                }
+
+                return teller;
+
+
             }
 
             
