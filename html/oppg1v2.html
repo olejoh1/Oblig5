@@ -14,7 +14,7 @@
 			var d = new Date();
 
 			var today = d.getTime();
-			
+
 			function oppstart() {
 					
 					datalaster = new XMLHttpRequest();
@@ -34,23 +34,46 @@
 
             function visHendelser(){
 
+				document.getElementById("utskrift").innerHTML = "";
+
                 if( datalaster.readyState === 4 && datalaster.status === 200) {
-			
+
 					var linjer = datalaster.responseText.split("\n");
+
+					var kurs =[];
+
+					console.log(linjer);
 			
 					for(var i=0;i<linjer.length;i++) {
 						var deler = linjer[i].split(";");
 
-						var date1 = new Date(deler[2]);
+						kurs.push({kursId: deler[0], kursNavn: deler[1], dato: deler[2], plasser: deler[3]})
 
-						var date = date1.getTime();
-						
+
+					}
+
+					kurs.sort(function(a, b) {
+
+						var d = new Date(a.dato);
+						var e = new Date(b.dato);
+						var dateA = d.getTime();
+						var dateB = e.getTime();
+						return dateA - dateB;
+
+					});
+
+					for(var i=0;i<linjer.length;i++) {
+
+						var d = new Date(kurs[i].dato);
+						var date = d.getTime();
+
+						console.log(today < date);
+
 						if(today < date){
-						document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + deler[0] + "-" + deler[1] + "</b>" + "</i>" + "<br />" + 
-						deler[2] + "<br />" +
-						"Antall plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
+							document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + kurs[i].kursId + "-" + kurs[i].kursNavn + "</b>" + "</i>" + "<br />" + 
+							kurs[i].dato + "<br />" +
+							"Antall plasser: " + kurs[i].plasser + "<br />"  + "<br />"  + "<br />";
 						}
-
 					}
 					
 				} 
@@ -123,7 +146,7 @@
 				<article>
 					<h3>Kommende hendelse</h3>
 					
-					<button type="button" id="btnGo">Click</button>
+					<button type="button" id="btnGo">Refresh</button>
 
                     <p id="utskrift"></p>
 

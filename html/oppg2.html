@@ -13,50 +13,72 @@
             var registrering;
             var paamelte;
 
+            var d = new Date();
+
+			var today = d.getTime();
+
 			function oppstart() {
 					
-					datalaster = new XMLHttpRequest();
+				datalaster = new XMLHttpRequest();
 					
-					var filnavn = "presentasjoner.dat?tullball=" + Math.random();
+				var filnavn = "presentasjoner.dat?tullball=" + Math.random();
 					
-					datalaster.open("GET",filnavn,true);
+				datalaster.open("GET",filnavn,true);
 					
-					datalaster.onreadystatechange = visHendelser;
+				datalaster.onreadystatechange = visHendelser;
 					
-					datalaster.send();
+				datalaster.send();
 	  	
-                    document.getElementById("btnRegistrer").onclick = registrer;		
+                document.getElementById("btnRegistrer").onclick = registrer;		
+		
+			    document.getElementById("btnGo").onclick = visHendelser;
+		
 		
 			}
 
             function visHendelser(){
 
+				document.getElementById("utskrift").innerHTML = "";
+
                 if( datalaster.readyState === 4 && datalaster.status === 200) {
-			
+
 					var linjer = datalaster.responseText.split("\n");
+
+					var kurs =[];
+
+					console.log(linjer);
 			
-					for(var i = 0; i < linjer.length; i++) {
+					for(var i=0;i<linjer.length;i++) {
 						var deler = linjer[i].split(";");
-						
-						document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + deler[0] + "-" + deler[1] + "</b>" + "</i>" + "<br />" + 
-						deler[2] + "<br />" +
-						"Antall plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
-						
-						console.log(deler);
+
+						kurs.push({kursId: deler[0], kursNavn: deler[1], dato: deler[2], plasser: deler[3]})
+
 
 					}
 
-                    for(var i = 0; i < linjer.length; i++){
+					kurs.sort(function(a, b) {
 
-                        var del = linjer[i].split(";");
+						var d = new Date(a.dato);
+						var e = new Date(b.dato);
+						var dateA = d.getTime();
+						var dateB = e.getTime();
+						return dateA - dateB;
 
-                        var listePunkt = document.createElement("option");
-                        listePunkt.value = del[0];
-                        var tekst = document.createTextNode(del[1]);
-                        listePunkt.appendChild(tekst);
-                        document.getElementById("kurs").appendChild(listePunkt);
+					});
 
-                    }
+					for(var i=0;i<linjer.length;i++) {
+
+						var d = new Date(kurs[i].dato);
+						var date = d.getTime();
+
+						console.log(today < date);
+
+						if(today < date){
+							document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + kurs[i].kursId + "-" + kurs[i].kursNavn + "</b>" + "</i>" + "<br />" + 
+							kurs[i].dato + "<br />" +
+							"Antall plasser: " + kurs[i].plasser + "<br />"  + "<br />"  + "<br />";
+						}
+					}
 					
 				} 
 				else if (datalaster.readyState === 4 && datalaster.status === 404) {
@@ -233,6 +255,8 @@
                     <p id="warning"></p>
                 </article>
 				<article class="column nr_2">
+
+                    <button type="button" id="btnGo">Refresh</button>
 
                     <p id="utskrift"></p>
 
