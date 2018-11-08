@@ -71,14 +71,27 @@
 						var d = new Date(kurs[i].dato);
 						var date = d.getTime();
 
-						console.log(today < date);
-
 						if(today < date){
 							document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + kurs[i].kursId + "-" + kurs[i].kursNavn + "</b>" + "</i>" + "<br />" + 
 							kurs[i].dato + "<br />" +
 							"Antall plasser: " + kurs[i].plasser + "<br />"  + "<br />"  + "<br />";
 						}
 					}
+
+                    for(var i = 0; i < linjer.length; i++){
+
+                        var d = new Date(kurs[i].dato);
+						var date = d.getTime();
+                        
+                        if(today < date){
+                            var listePunkt = document.createElement("option");
+                            listePunkt.value = kurs[i].kursId;
+                            var tekst = document.createTextNode(kurs[i].kursNavn);
+                            listePunkt.appendChild(tekst);
+                            document.getElementById("kurs").appendChild(listePunkt);
+                        }
+
+                    }
 					
 				} 
 				else if (datalaster.readyState === 4 && datalaster.status === 404) {
