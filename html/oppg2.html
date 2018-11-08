@@ -111,6 +111,10 @@
                 var navn = document.getElementById("navnInn").value;
                 var ePost = document.getElementById("epostInn").value;
 
+                document.getElementById("kurs").selectedIndex = "!";
+                document.getElementById("navnInn").value = "";
+                document.getElementById("epostInn").value = "";
+
                 registrert(kurs,navn,ePost);
 
             }
