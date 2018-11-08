@@ -15,9 +15,7 @@
 					
 					datalaster = new XMLHttpRequest();
 					
-					var filnavn = "proxy.dat?tullball=" + Math.random();
-					
-					datalaster.open("GET",filnavn,true);
+					datalaster.open("GET","proxy.php",true);
 					
 					datalaster.onreadystatechange = visHendelser;
 					
