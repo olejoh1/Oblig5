@@ -11,6 +11,9 @@
 
             var datalaster;
 
+			var d = new Date();
+
+			var today = d.getTime();
 			function oppstart() {
 					
 					datalaster = new XMLHttpRequest();
@@ -22,8 +25,10 @@
 					datalaster.onreadystatechange = visHendelser;
 					
 					datalaster.send();
+
+					console.log(today);
 	  	
-			
+				document.getElementById("btnGo").onclick = visHendelser;
 		
 		
 			}
@@ -35,13 +40,21 @@
 					var linjer = datalaster.responseText.split("\n");
 			
 					for(var i=0;i<linjer.length;i++) {
-						var deler = linjer[i].split(";");					
+						var deler = linjer[i].split(";");
+
+						var date1 = new Date(deler[2]);
+
+						var date = date1.getTime();
 						
+						if(today < date){
 						document.getElementById("utskrift").innerHTML += "<i>" + "<b>" + deler[0] + "-" + deler[1] + "</b>" + "</i>" + "<br />" + 
 						deler[2] + "<br />" +
-						"Antall ledie plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
+						"Antall plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
+						}
 						
 						console.log(deler);
+						console.log(date);
+						console.log(today < date);
 
 					}
 					
@@ -113,7 +126,9 @@
 			<section id="column_nr_1">
                 <h2>Presentasjoner</h2>
 				<article>
-                    <h3>Kommende hendelse</h3>
+					<h3>Kommende hendelse</h3>
+					
+					<button type="button" id="btnGo">Click</button>
 
                     <p id="utskrift"></p>
 
