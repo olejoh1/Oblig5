@@ -30,7 +30,20 @@
 
                 if( datalaster.readyState === 4 && datalaster.status === 200) {
 
+					var print = "";
+					var textXML = datalaster.responseXML;
+
+					var weather = textXML.getElementsByTagName("weatherdata")[0].getElementsByTagName("forecast")[0].getElementsByTagName("tabular").getElementsByTagName("time");
 					
+					for(var i = 0; i < weather.length; i++){
+
+						
+
+
+
+					}
+
+
 					
 				} 
 				else if (datalaster.readyState === 4 && datalaster.status === 404) {

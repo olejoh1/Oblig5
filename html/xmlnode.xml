@@ -1,0 +1,512 @@
+<weatherdata>
+    <location>
+        <name>Fredrikstad</name>
+        <type>By</type>
+        <country>Norge</country>
+        <timezone id="Europe/Oslo" utcoffsetMinutes="60"/>
+        <location altitude="3" latitude="59.2180979295736" longitude="10.929813982158" geobase="ssr" geobaseid="33600"/>
+    </location>
+        <credit>
+        <!--
+        For å bruke gratis værdata fra Yr, MÅ du vise følgende tekst godt synlig på nettsiden din. Teksten skal være en lenke til URL-en som er spesifisert.
+        -->
+        <!--
+        Les mer om vilkår for bruk av gratis værdata + retningslinjer på 
+        http://om.yr.no/verdata/ 
+        -->
+        <link text="Værvarsel fra Yr, levert av NRK og Meteorologisk institutt" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/"/>
+    </credit>
+    <links>
+        <link id="xmlSource" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/varsel.xml"/>
+        <link id="xmlSourceHourByHour" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/varsel_time_for_time.xml"/>
+        <link id="overview" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/"/>
+        <link id="hourByHour" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/time_for_time.html"/>
+        <link id="longTermForecast" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/langtidsvarsel.html"/>
+        <link id="radar" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/radar.html"/>
+        <link id="nowcast" url="http://www.yr.no/sted/Norge/Østfold/Fredrikstad/Fredrikstad/varsel_nu.xml"/>
+    </links>
+    <meta>
+        <lastupdate>2018-11-08T22:11:38</lastupdate>
+        <nextupdate>2018-11-09T05:00:00</nextupdate>
+    </meta>
+    <sun rise="2018-11-09T07:54:36" set="2018-11-09T16:04:46"/>
+    <forecast>
+        <text>
+            <location name="Fredrikstad">
+                <time from="2018-11-09" to="2018-11-09">
+                    <title>fredag</title>
+                    <body>
+                        <strong>Østlandet og Telemark:</strong> Austleg eller skiftande bris. Skya. Stort sett opphaldsver. Frå i føremiddag litt spreidd regn sør for Mjøsa. I kveld aukande nedbør, lite eller ingen nedbør nord for Lillehammer. Lokal tåke.
+                    </body>
+                </time>
+                <time from="2018-11-10" to="2018-11-10">
+                    <title>lørdag</title>
+                    <body>
+                        <strong>Østafjells:</strong> Søraust bris, liten til stiv kuling på kysten, sterk kuling vest for Lindesnes. Skyet, regn. Lokalt mye nedbør i Agder og Telemark.
+                    </body>
+                </time>
+                <time from="2018-11-11" to="2018-11-11">
+                    <title>søndag</title>
+                    <body>
+                        <strong>Østafjells:</strong> Aust og søraust bris, på kysten liten til stiv kuling. Regn, lokalt store nedbørmengder i sør og vest.
+                    </body>
+                </time>
+            </location>
+        </text>
+        <tabular>
+            <time from="2018-11-09T01:00:00" to="2018-11-09T06:00:00" period="0">
+                <!--...-->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-09T01:00:00  -->
+                <windDirection deg="105.8" code="ESE" name="Øst-sørøst"/>
+                <windSpeed mps="1.1" name="Flau vind"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1020.9"/>
+            </time>
+            <time from="2018-11-09T06:00:00" to="2018-11-09T12:00:00" period="1">
+                <!--...-->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0" minvalue="0" maxvalue="0.2"/>
+                <!--  Valid at 2018-11-09T06:00:00  -->
+                <windDirection deg="65.6" code="ENE" name="Øst-nordøst"/>
+                <windSpeed mps="0.4" name="Flau vind"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1021.1"/>
+            </time>
+            <time from="2018-11-09T12:00:00" to="2018-11-09T18:00:00" period="2">
+                <!--...-->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0" minvalue="0" maxvalue="0.1"/>
+                <!--  Valid at 2018-11-09T12:00:00  -->
+                <windDirection deg="68.6" code="ENE" name="Øst-nordøst"/>
+                <windSpeed mps="1.5" name="Flau vind"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1020.6"/>
+            </time>
+            <time from="2018-11-09T18:00:00" to="2018-11-10T00:00:00" period="3">
+                <!--
+                Valid from 2018-11-09T18:00:00 to 2018-11-10T00:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="2.6" minvalue="1.8" maxvalue="3.5"/>
+                <!--  Valid at 2018-11-09T18:00:00  -->
+                <windDirection deg="76.8" code="ENE" name="Øst-nordøst"/>
+                <windSpeed mps="2.1" name="Svak vind"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1017.6"/>
+            </time>
+            <time from="2018-11-10T00:00:00" to="2018-11-10T06:00:00" period="0">
+                <!--
+                Valid from 2018-11-10T00:00:00 to 2018-11-10T06:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="1.7" minvalue="1.4" maxvalue="2.0"/>
+                <!--  Valid at 2018-11-10T00:00:00  -->
+                <windDirection deg="102.9" code="ESE" name="Øst-sørøst"/>
+                <windSpeed mps="2.4" name="Svak vind"/>
+                <temperature unit="celsius" value="8"/>
+                <pressure unit="hPa" value="1014.2"/>
+            </time>
+            <time from="2018-11-10T06:00:00" to="2018-11-10T12:00:00" period="1">
+                <!--
+                Valid from 2018-11-10T06:00:00 to 2018-11-10T12:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0" minvalue="0" maxvalue="0.5"/>
+                <!--  Valid at 2018-11-10T06:00:00  -->
+                <windDirection deg="117.7" code="ESE" name="Øst-sørøst"/>
+                <windSpeed mps="3.0" name="Svak vind"/>
+                <temperature unit="celsius" value="8"/>
+                <pressure unit="hPa" value="1011.2"/>
+            </time>
+            <time from="2018-11-10T12:00:00" to="2018-11-10T18:00:00" period="2">
+                <!--
+                Valid from 2018-11-10T12:00:00 to 2018-11-10T18:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="1.0" minvalue="0.7" maxvalue="1.4"/>
+                <!--  Valid at 2018-11-10T12:00:00  -->
+                <windDirection deg="110.8" code="ESE" name="Øst-sørøst"/>
+                <windSpeed mps="3.9" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1009.8"/>
+            </time>
+            <time from="2018-11-10T18:00:00" to="2018-11-11T00:00:00" period="3">
+                <!--
+                Valid from 2018-11-10T18:00:00 to 2018-11-11T00:00:00 
+                -->
+                <symbol number="10" numberEx="10" name="Kraftig regn" var="10"/>
+                <precipitation value="6.6" minvalue="5.9" maxvalue="7.3"/>
+                <!--  Valid at 2018-11-10T18:00:00  -->
+                <windDirection deg="110.0" code="ESE" name="Øst-sørøst"/>
+                <windSpeed mps="4.3" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1008.6"/>
+            </time>
+            <time from="2018-11-11T00:00:00" to="2018-11-11T06:00:00" period="0">
+                <!--
+                Valid from 2018-11-11T00:00:00 to 2018-11-11T06:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="4.6" minvalue="4.1" maxvalue="5.1"/>
+                <!--  Valid at 2018-11-11T00:00:00  -->
+                <windDirection deg="130.5" code="SE" name="Sørøst"/>
+                <windSpeed mps="5.2" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1008.6"/>
+            </time>
+            <time from="2018-11-11T06:00:00" to="2018-11-11T12:00:00" period="1">
+                <!--
+                Valid from 2018-11-11T06:00:00 to 2018-11-11T12:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="3.5" minvalue="2.6" maxvalue="4.5"/>
+                <!--  Valid at 2018-11-11T06:00:00  -->
+                <windDirection deg="112.0" code="ESE" name="Øst-sørøst"/>
+                <windSpeed mps="4.3" name="Lett bris"/>
+                <temperature unit="celsius" value="10"/>
+                <pressure unit="hPa" value="1007.4"/>
+            </time>
+            <time from="2018-11-11T13:00:00" to="2018-11-11T19:00:00" period="2">
+                <!--
+                Valid from 2018-11-11T13:00:00 to 2018-11-11T19:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="3.1"/>
+                <!--  Valid at 2018-11-11T13:00:00  -->
+                <windDirection deg="126.3" code="SE" name="Sørøst"/>
+                <windSpeed mps="4.3" name="Lett bris"/>
+                <temperature unit="celsius" value="10"/>
+                <pressure unit="hPa" value="1009.3"/>
+            </time>
+            <time from="2018-11-11T19:00:00" to="2018-11-12T01:00:00" period="3">
+                <!--
+                Valid from 2018-11-11T19:00:00 to 2018-11-12T01:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="2.7"/>
+                <!--  Valid at 2018-11-11T19:00:00  -->
+                <windDirection deg="120.2" code="ESE" name="Øst-sørøst"/>
+                <windSpeed mps="5.4" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1009.9"/>
+            </time>
+            <time from="2018-11-12T01:00:00" to="2018-11-12T07:00:00" period="0">
+                <!--
+                Valid from 2018-11-12T01:00:00 to 2018-11-12T07:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="3.4"/>
+                <!--  Valid at 2018-11-12T01:00:00  -->
+                <windDirection deg="98.5" code="E" name="Øst"/>
+                <windSpeed mps="5.0" name="Lett bris"/>
+                <temperature unit="celsius" value="8"/>
+                <pressure unit="hPa" value="1010.8"/>
+            </time>
+            <time from="2018-11-12T07:00:00" to="2018-11-12T13:00:00" period="1">
+                <!--
+                Valid from 2018-11-12T07:00:00 to 2018-11-12T13:00:00 
+                -->
+                <symbol number="5" numberEx="5" name="Regnbyger" var="05d"/>
+                <precipitation value="1.9"/>
+                <!--  Valid at 2018-11-12T07:00:00  -->
+                <windDirection deg="173.5" code="S" name="Sør"/>
+                <windSpeed mps="4.6" name="Lett bris"/>
+                <temperature unit="celsius" value="8"/>
+                <pressure unit="hPa" value="1011.2"/>
+            </time>
+            <time from="2018-11-12T13:00:00" to="2018-11-12T19:00:00" period="2">
+                <!--
+                Valid from 2018-11-12T13:00:00 to 2018-11-12T19:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03d"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-12T13:00:00  -->
+                <windDirection deg="213.5" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="4.4" name="Lett bris"/>
+                <temperature unit="celsius" value="10"/>
+                <pressure unit="hPa" value="1012.9"/>
+            </time>
+            <time from="2018-11-12T19:00:00" to="2018-11-13T01:00:00" period="3">
+                <!--
+                Valid from 2018-11-12T19:00:00 to 2018-11-13T01:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="2.5"/>
+                <!--  Valid at 2018-11-12T19:00:00  -->
+                <windDirection deg="163.9" code="SSE" name="Sør-sørøst"/>
+                <windSpeed mps="3.9" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1014.1"/>
+            </time>
+            <time from="2018-11-13T01:00:00" to="2018-11-13T07:00:00" period="0">
+                <!--
+                Valid from 2018-11-13T01:00:00 to 2018-11-13T07:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="2.7"/>
+                <!--  Valid at 2018-11-13T01:00:00  -->
+                <windDirection deg="161.2" code="SSE" name="Sør-sørøst"/>
+                <windSpeed mps="3.8" name="Lett bris"/>
+                <temperature unit="celsius" value="8"/>
+                <pressure unit="hPa" value="1013.6"/>
+            </time>
+            <time from="2018-11-13T07:00:00" to="2018-11-13T13:00:00" period="1">
+                <!--
+                Valid from 2018-11-13T07:00:00 to 2018-11-13T13:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="2.8"/>
+                <!--  Valid at 2018-11-13T07:00:00  -->
+                <windDirection deg="207.6" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="3.6" name="Lett bris"/>
+                <temperature unit="celsius" value="8"/>
+                <pressure unit="hPa" value="1011.5"/>
+            </time>
+            <time from="2018-11-13T13:00:00" to="2018-11-13T19:00:00" period="2">
+                <!--
+                Valid from 2018-11-13T13:00:00 to 2018-11-13T19:00:00 
+                -->
+                <symbol number="9" numberEx="9" name="Regn" var="09"/>
+                <precipitation value="3.0"/>
+                <!--  Valid at 2018-11-13T13:00:00  -->
+                <windDirection deg="68.0" code="ENE" name="Øst-nordøst"/>
+                <windSpeed mps="4.8" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1010.6"/>
+            </time>
+            <time from="2018-11-13T19:00:00" to="2018-11-14T01:00:00" period="3">
+                <!--
+                Valid from 2018-11-13T19:00:00 to 2018-11-14T01:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03n"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-13T19:00:00  -->
+                <windDirection deg="195.7" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="2.0" name="Svak vind"/>
+                <temperature unit="celsius" value="7"/>
+                <pressure unit="hPa" value="1010.6"/>
+            </time>
+            <time from="2018-11-14T01:00:00" to="2018-11-14T07:00:00" period="0">
+                <!--
+                Valid from 2018-11-14T01:00:00 to 2018-11-14T07:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03n"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-14T01:00:00  -->
+                <windDirection deg="242.4" code="WSW" name="Vest-sørvest"/>
+                <windSpeed mps="1.8" name="Svak vind"/>
+                <temperature unit="celsius" value="6"/>
+                <pressure unit="hPa" value="1012.3"/>
+            </time>
+            <time from="2018-11-14T07:00:00" to="2018-11-14T13:00:00" period="1">
+                <!--
+                Valid from 2018-11-14T07:00:00 to 2018-11-14T13:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03d"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-14T07:00:00  -->
+                <windDirection deg="323.5" code="NW" name="Nordvest"/>
+                <windSpeed mps="1.8" name="Svak vind"/>
+                <temperature unit="celsius" value="5"/>
+                <pressure unit="hPa" value="1015.5"/>
+            </time>
+            <time from="2018-11-14T13:00:00" to="2018-11-14T19:00:00" period="2">
+                <!--
+                Valid from 2018-11-14T13:00:00 to 2018-11-14T19:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-14T13:00:00  -->
+                <windDirection deg="242.4" code="WSW" name="Vest-sørvest"/>
+                <windSpeed mps="2.1" name="Svak vind"/>
+                <temperature unit="celsius" value="7"/>
+                <pressure unit="hPa" value="1019.5"/>
+            </time>
+            <time from="2018-11-14T19:00:00" to="2018-11-15T01:00:00" period="3">
+                <!--
+                Valid from 2018-11-14T19:00:00 to 2018-11-15T01:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-14T19:00:00  -->
+                <windDirection deg="147.4" code="SSE" name="Sør-sørøst"/>
+                <windSpeed mps="2.6" name="Svak vind"/>
+                <temperature unit="celsius" value="6"/>
+                <pressure unit="hPa" value="1021.3"/>
+            </time>
+            <time from="2018-11-15T01:00:00" to="2018-11-15T07:00:00" period="0">
+                <!--
+                Valid from 2018-11-15T01:00:00 to 2018-11-15T07:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-15T01:00:00  -->
+                <windDirection deg="223.8" code="SW" name="Sørvest"/>
+                <windSpeed mps="3.9" name="Lett bris"/>
+                <temperature unit="celsius" value="8"/>
+                <pressure unit="hPa" value="1022.5"/>
+            </time>
+            <time from="2018-11-15T07:00:00" to="2018-11-15T13:00:00" period="1">
+                <!--
+                Valid from 2018-11-15T07:00:00 to 2018-11-15T13:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-15T07:00:00  -->
+                <windDirection deg="215.5" code="SW" name="Sørvest"/>
+                <windSpeed mps="5.0" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1021.6"/>
+            </time>
+            <time from="2018-11-15T13:00:00" to="2018-11-15T19:00:00" period="2">
+                <!--
+                Valid from 2018-11-15T13:00:00 to 2018-11-15T19:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-15T13:00:00  -->
+                <windDirection deg="200.7" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="5.2" name="Lett bris"/>
+                <temperature unit="celsius" value="10"/>
+                <pressure unit="hPa" value="1022.4"/>
+            </time>
+            <time from="2018-11-15T19:00:00" to="2018-11-16T01:00:00" period="3">
+                <!--
+                Valid from 2018-11-15T19:00:00 to 2018-11-16T01:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-15T19:00:00  -->
+                <windDirection deg="212.4" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="5.0" name="Lett bris"/>
+                <temperature unit="celsius" value="10"/>
+                <pressure unit="hPa" value="1022.1"/>
+            </time>
+            <time from="2018-11-16T01:00:00" to="2018-11-16T07:00:00" period="0">
+                <!--
+                Valid from 2018-11-16T01:00:00 to 2018-11-16T07:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-16T01:00:00  -->
+                <windDirection deg="219.2" code="SW" name="Sørvest"/>
+                <windSpeed mps="4.8" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1021.5"/>
+            </time>
+            <time from="2018-11-16T07:00:00" to="2018-11-16T13:00:00" period="1">
+                <!--
+                Valid from 2018-11-16T07:00:00 to 2018-11-16T13:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03d"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-16T07:00:00  -->
+                <windDirection deg="211.2" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="4.9" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1021.9"/>
+            </time>
+            <time from="2018-11-16T13:00:00" to="2018-11-16T19:00:00" period="2">
+                <!--
+                Valid from 2018-11-16T13:00:00 to 2018-11-16T19:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-16T13:00:00  -->
+                <windDirection deg="234.3" code="SW" name="Sørvest"/>
+                <windSpeed mps="5.6" name="Laber bris"/>
+                <temperature unit="celsius" value="10"/>
+                <pressure unit="hPa" value="1022.3"/>
+            </time>
+            <time from="2018-11-16T19:00:00" to="2018-11-17T01:00:00" period="3">
+                <!--
+                Valid from 2018-11-16T19:00:00 to 2018-11-17T01:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03n"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-16T19:00:00  -->
+                <windDirection deg="192.6" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="4.5" name="Lett bris"/>
+                <temperature unit="celsius" value="9"/>
+                <pressure unit="hPa" value="1023.0"/>
+            </time>
+            <time from="2018-11-17T01:00:00" to="2018-11-17T07:00:00" period="0">
+                <!--
+                Valid from 2018-11-17T01:00:00 to 2018-11-17T07:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-17T01:00:00  -->
+                <windDirection deg="214.4" code="SW" name="Sørvest"/>
+                <windSpeed mps="3.2" name="Svak vind"/>
+                <temperature unit="celsius" value="7"/>
+                <pressure unit="hPa" value="1026.3"/>
+            </time>
+            <time from="2018-11-17T07:00:00" to="2018-11-17T13:00:00" period="1">
+                <!--
+                Valid from 2018-11-17T07:00:00 to 2018-11-17T13:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-17T07:00:00  -->
+                <windDirection deg="24.4" code="NNE" name="Nord-nordøst"/>
+                <windSpeed mps="2.9" name="Svak vind"/>
+                <temperature unit="celsius" value="6"/>
+                <pressure unit="hPa" value="1027.6"/>
+            </time>
+            <time from="2018-11-17T13:00:00" to="2018-11-17T19:00:00" period="2">
+                <!--
+                Valid from 2018-11-17T13:00:00 to 2018-11-17T19:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03d"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-17T13:00:00  -->
+                <windDirection deg="6.7" code="N" name="Nord"/>
+                <windSpeed mps="2.5" name="Svak vind"/>
+                <temperature unit="celsius" value="7"/>
+                <pressure unit="hPa" value="1028.3"/>
+            </time>
+            <time from="2018-11-17T19:00:00" to="2018-11-18T01:00:00" period="3">
+                <!--
+                Valid from 2018-11-17T19:00:00 to 2018-11-18T01:00:00 
+                -->
+                <symbol number="3" numberEx="3" name="Delvis skyet" var="03n"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-17T19:00:00  -->
+                <windDirection deg="20.6" code="NNE" name="Nord-nordøst"/>
+                <windSpeed mps="2.6" name="Svak vind"/>
+                <temperature unit="celsius" value="5"/>
+                <pressure unit="hPa" value="1028.7"/>
+            </time>
+            <time from="2018-11-18T01:00:00" to="2018-11-18T07:00:00" period="0">
+                <!--
+                Valid from 2018-11-18T01:00:00 to 2018-11-18T07:00:00 
+                -->
+                <symbol number="4" numberEx="4" name="Skyet" var="04"/>
+                <precipitation value="0"/>
+                <!--  Valid at 2018-11-18T01:00:00  -->
+                <windDirection deg="195.3" code="SSW" name="Sør-sørvest"/>
+                <windSpeed mps="2.4" name="Svak vind"/>
+                <temperature unit="celsius" value="4"/>
+                <pressure unit="hPa" value="1030.4"/>
+            </time>
+        </tabular>
+    </forecast>
+    <observations>
+        <weatherstation stno="17000" sttype="eklima" name="Strømtangen fyr" distance="9398" lat="59.15130" lon="10.82880" source="Meteorologisk Institutt">
+            <temperature unit="celsius" value="8.5" time="2018-11-08T22:00:00Z"/>
+            <windDirection deg="113.0" code="ESE" name="Øst-sørøst" time="2018-11-08T22:00:00Z"/>
+            <windSpeed mps="4.0" name="Lett bris" time="2018-11-08T22:00:00Z"/>
+        </weatherstation>
+        <weatherstation stno="3190" sttype="eklima" name="Sarpsborg" distance="12806" lat="59.28520" lon="11.11280" source="Meteorologisk Institutt">
+            <temperature unit="celsius" value="8.1" time="2018-11-08T22:00:00Z"/>
+            <windDirection deg="152.0" code="SSE" name="Sør-sørøst" time="2018-11-08T22:00:00Z"/>
+            <windSpeed mps="1.6" name="Svak vind" time="2018-11-08T22:00:00Z"/>
+        </weatherstation>
+        <weatherstation stno="3370" sttype="eklima" name="Øsaker" distance="12943" lat="59.31930" lon="11.04220" source="Meteorologisk Institutt">
+            <temperature unit="celsius" value="7.9" time="2018-11-08T22:00:00Z"/>
+        </weatherstation>
+    </observations>
+</weatherdata>
