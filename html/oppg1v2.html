@@ -14,6 +14,7 @@
 			var d = new Date();
 
 			var today = d.getTime();
+			
 			function oppstart() {
 					
 					datalaster = new XMLHttpRequest();
@@ -25,8 +26,6 @@
 					datalaster.onreadystatechange = visHendelser;
 					
 					datalaster.send();
-
-					console.log(today);
 	  	
 				document.getElementById("btnGo").onclick = visHendelser;
 		
@@ -51,10 +50,6 @@
 						deler[2] + "<br />" +
 						"Antall plasser: " + deler[3] + "<br />"  + "<br />"  + "<br />";
 						}
-						
-						console.log(deler);
-						console.log(date);
-						console.log(today < date);
 
 					}
 					
