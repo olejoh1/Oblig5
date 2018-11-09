@@ -20,6 +20,8 @@
 					datalaster.onreadystatechange = visHendelser;
 					
 					datalaster.send();
+
+					document.getElementById("btnGo").onclick = visHendelser;
 		
 		
 			}
@@ -37,13 +39,14 @@
 					
 					for(var i = 0; i < weather.length; i++){
 
-						
+						var temp = weather[i].getElementsByTagName("temperature").value;
+						var time = weather[i]['from'];
 
-
+						print += "Time: " + time + "<br />" + "Temperatur: " + temp + "<br />";
 
 					}
 
-
+					document.getElementById("utskrift").innerHTML = print;
 					
 				} 
 				else if (datalaster.readyState === 4 && datalaster.status === 404) {
@@ -111,9 +114,9 @@
 		</nav>
 		<main id="row">
 			<section id="column_nr_1">
-                <h2>Presentasjoner</h2>
+                <h2>Vær Rapport</h2>
 				<article>
-					<h3>Kommende hendelse</h3>
+					<h3>Været</h3>
 					
 					<button type="button" id="btnGo">Refresh</button>
 
