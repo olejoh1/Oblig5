@@ -36,11 +36,12 @@
 					var textXML = datalaster.responseXML;
 
 					var weather = textXML.getElementsByTagName("weatherdata")[0].getElementsByTagName("forecast")[0].getElementsByTagName("tabular")[0].getElementsByTagName("time");
+					var time = textXML.getElementsByTagName("weatherdata")[0].getElementsByTagName("forecast")[0].getElementsByTagName("tabular");
 					
 					for(var i = 0; i < weather.length; i++){
 
 						var temp = weather[i].getElementsByTagName("temperature").value;
-						var time = weather[i]['from'];
+						var date = time[i].getElementsByTagName("time")['from'];
 
 						print += "Time: " + time + "<br />" + "Temperatur: " + temp + "<br />";
 
