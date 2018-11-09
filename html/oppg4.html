@@ -35,7 +35,7 @@
 					var print = "";
 					var textXML = datalaster.responseXML;
 
-					var weather = textXML.getElementsByTagName("weatherdata")[0].getElementsByTagName("forecast")[0].getElementsByTagName("tabular").getElementsByTagName("time");
+					var weather = textXML.getElementsByTagName("weatherdata")[0].getElementsByTagName("forecast")[0].getElementsByTagName("tabular")[0].getElementsByTagName("time");
 					
 					for(var i = 0; i < weather.length; i++){
 

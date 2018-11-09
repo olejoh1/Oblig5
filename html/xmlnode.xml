@@ -6,7 +6,7 @@
         <timezone id="Europe/Oslo" utcoffsetMinutes="60"/>
         <location altitude="3" latitude="59.2180979295736" longitude="10.929813982158" geobase="ssr" geobaseid="33600"/>
     </location>
-        <credit>
+    <credit>
         <!--
         For å bruke gratis værdata fra Yr, MÅ du vise følgende tekst godt synlig på nettsiden din. Teksten skal være en lenke til URL-en som er spesifisert.
         -->
