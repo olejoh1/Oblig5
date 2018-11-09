@@ -6,7 +6,7 @@
     while($linje = fgets($fil)){
         echo $linje;
     }
-
+    s
 
 
 ?>
